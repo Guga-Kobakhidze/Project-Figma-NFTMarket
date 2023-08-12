@@ -1,6 +1,7 @@
 /* Carousel styling */
 
 .carousel_container {
+  position: relative;
     width: 1500px;
     height: 850px;
     margin: 0 auto;
@@ -8,7 +9,27 @@
     text-align: center;
 }
 
-.slider {
+.home_section_4 .carousel_container {
+  height: 100%;
+}
+
+.left-handle,
+.right-handle {
+  position: absolute;
+  top: 300px;
+  z-index: 1;
+}
+
+.left-handle {
+  left: 0;
+}
+
+.right-handle {
+  right: 5px;
+}
+
+.slider,
+.slider2 {
     transition: all 0.4s;
     padding: 0 1%;
     display: flex;
@@ -17,7 +38,8 @@
     margin-bottom: 84px;
 }
 
-.carousel_card {
+.carousel_card,
+.carousel_card2 {
   position: relative;
   width: 460px;
   padding: 30px;
@@ -113,3 +135,4 @@
   box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.12);
   backdrop-filter: blur(22.5px);
 }
+
