@@ -54,3 +54,32 @@ rightHandle2.addEventListener("click", () => {
   sliderIndex2 = (sliderIndex2 + 1) % (numCards - 2);
   updateSlider2Position();
 });
+
+
+// for slider 3 ---> //
+
+const slider3 = document.querySelector(".slider3");
+const leftHandle3 = document.querySelector(".left-handle3");
+const rightHandle3 = document.querySelector(".right-handle3");
+
+let sliderIndex3 = 0;
+const cardWidth3 = 640;
+const numCards3 = document.querySelectorAll(".carousel_card3").length;
+
+const updateSlider3Position = () => {
+  slider3.style.transform = `translateX(-${sliderIndex3 * cardWidth3}px)`;
+};
+
+leftHandle3.addEventListener("click", () => {
+  if (sliderIndex3 == 0) {
+    sliderIndex3 = (sliderIndex3 - 2 + numCards) % numCards;
+  } else {
+    sliderIndex3 = (sliderIndex3 - 1 + numCards) % numCards;
+  }
+  updateSlider3Position();
+});
+
+rightHandle3.addEventListener("click", () => {
+  sliderIndex3 = (sliderIndex3 + 1) % (numCards - 1);
+  updateSlider3Position();
+});
