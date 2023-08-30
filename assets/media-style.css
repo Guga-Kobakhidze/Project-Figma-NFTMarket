@@ -56,4 +56,8 @@
   .menu_section {
     display: none;
   }
+  .title_section {
+    width: 100%;
+    overflow: hidden;
+  }
 }
